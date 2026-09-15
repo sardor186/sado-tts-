@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sado TTS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <span>🔊</span>
+      <strong>Sado TTS</strong>
+    </div>
+
+    <button id="themeBtn" class="theme-btn">🌙</button>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="badge">Navoiy TTS</div>
+
+      <h1>Matnni jonli<br>ovozga aylantiring.</h1>
+
+      <p>
+        O‘zbekcha matnlaringizni tabiiy va ifodali ovozga aylantiring.
+      </p>
+    </section>
+
+    <section class="card">
+
+      <div class="card-header">
+        <h2>Matningiz</h2>
+        <span id="counter">0 / 5000</span>
+      </div>
+
+      <textarea
+        id="text"
+        maxlength="5000"
+        placeholder="Bu yerga matningizni yozing..."
+      ></textarea>
+
+      <div class="settings">
+
+        <div class="setting">
+          <label for="voice">Ovoz</label>
+
+          <select id="voice">
+            <option value="asal">Asal</option>
+          </select>
+        </div>
+
+        <div class="setting">
+          <label for="speed">
+            Tezlik:
+            <span id="speedValue">1.0x</span>
+          </label>
+
+          <input
+            id="speed"
+            type="range"
+            min="0.5"
+            max="1.5"
+            step="0.1"
+            value="1"
+          >
+        </div>
+
+      </div>
+
+      <div class="buttons">
+
+        <button id="generateBtn" class="primary">
+          🔊 Ovoz yaratish
+        </button>
+
+        <button id="pauseBtn" class="secondary">
+          ⏸️ Pauza
+        </button>
+
+        <button id="stopBtn" class="secondary">
+          ⏹️ To‘xtatish
+        </button>
+
+        <button id="saveBtn" class="secondary">
+          💾 Saqlash
+        </button>
+
+      </div>
+
+      <div id="status" class="status">
+        Tayyor
+      </div>
+
+      <audio id="audio" controls></audio>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Sado TTS · Navoiy TTS</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
